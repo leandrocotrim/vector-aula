@@ -7,7 +7,8 @@ const routes: Routes = [
     path: '', component: HomeComponent
   },
   {
-    path: 'adm', loadChildren: () => import('./adm/adm.module').then(m => m.AdmModule)
+    //path: 'adm', loadChildren: () => import('./adm/adm.module').then(m => m.AdmModule) // #angular 8
+    path: 'adm', loadChildren: './adm/adm.module#AdmModule' // #Angular 7
   }
 ];
 

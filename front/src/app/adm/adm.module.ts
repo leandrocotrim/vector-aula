@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { HomeComponent } from './home/home.component';
 import { RouterModule, Routes } from '@angular/router';
 import { PessoaComponent } from './pessoa/pessoa.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 
 const routes: Routes = [
@@ -15,6 +15,8 @@ const routes: Routes = [
   declarations: [HomeComponent, PessoaComponent],
   imports: [
     RouterModule.forChild(routes),    
+    FormsModule,
+    ReactiveFormsModule 
   ]
 })
 export class AdmModule { }

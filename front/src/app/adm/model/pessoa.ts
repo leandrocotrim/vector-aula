@@ -1,3 +1,4 @@
 export class Pessoa {
-    nome = ''
+    nome: string;
+    idade: number;
 }

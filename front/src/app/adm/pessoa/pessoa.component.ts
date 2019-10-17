@@ -14,7 +14,9 @@ export class PessoaComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.pessoa = new Pessoa();
+    this.pessoa = new Pessoa;
+    this.pessoa.nome = 'Leandro Cotrim';
+    this.pessoa.idade = 32;
   }
 
   onSubmit(form: FormGroup) {

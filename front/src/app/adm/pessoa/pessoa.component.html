@@ -1,9 +1,16 @@
 <h1>Pessoa</h1>
 
-<form #form (ngSubmit)="onSubmit(form)">
-    Nome:
-    <input [value]="pessoa.nome"
-     (input)="pessoa.nome = $event.target.value"
-     #nome
-     > - {{ pessoa.nome }}
+<form #form="ngForm" (ngSubmit)="onSubmit(form)">
+    <div>
+        Nome:
+        <input [value]="pessoa.nome" (input)="pessoa.nome = $event.target.value" #nome> - {{ pessoa.nome }}
+    </div>
+    <div>
+        Idade:
+        <input [(ngModel)]="pessoa.idade" #idade name="idade"> - {{pessoa.idade}}
+    </div>
+    <div>
+        <button type="submit">Salvar Dados</button>
+    </div>
 </form>
+
