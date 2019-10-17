@@ -1,0 +1,9 @@
+<h1>Pessoa</h1>
+
+<form #form (ngSubmit)="onSubmit(form)">
+    Nome:
+    <input [value]="pessoa.nome"
+     (input)="pessoa.nome = $event.target.value"
+     #nome
+     > - {{ pessoa.nome }}
+</form>
