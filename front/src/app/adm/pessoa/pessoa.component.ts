@@ -15,7 +15,8 @@ export class PessoaComponent implements OnInit {
 
   ngOnInit() {
     this.pessoa = new Pessoa;
-    this.pessoa.nome = 'Leandro Cotrim';
+    this.pessoa.nome = 'Leandro';
+    this.pessoa.sobrenome = 'Cotrim';
     this.pessoa.idade = 32;
   }
 

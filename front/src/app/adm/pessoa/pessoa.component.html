@@ -7,7 +7,11 @@
     </div>
     <div>
         Idade:
-        <input [(ngModel)]="pessoa.idade" #idade name="idade"> - {{pessoa.idade}}
+        <input [(ngModel)]="pessoa.sobrenome" #sobrenome name="sobrenome"> - {{pessoa.sobrenome}}
+    </div>
+    <div>
+        Idade:
+        <input type="number" [(ngModel)]="pessoa.idade" #idade name="idade"> - {{pessoa.idade}}
     </div>
     <div>
         <button type="submit">Salvar Dados</button>
