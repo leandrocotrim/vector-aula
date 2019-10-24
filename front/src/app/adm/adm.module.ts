@@ -8,6 +8,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { MatSliderModule } from '@angular/material/slider';
 import { MatCommonModule } from '@angular/material/core';
 import {MatInputModule} from '@angular/material/input';
+import { HttpClientModule } from '@angular/common/http';
 
 
 const routes: Routes = [
@@ -25,7 +26,8 @@ const routes: Routes = [
     FormsModule,
     CommonModule,
     ReactiveFormsModule,
-    MatCommonModule, MatInputModule
+    MatCommonModule, MatInputModule,
+    HttpClientModule
   ]
 })
 export class AdmModule { }
