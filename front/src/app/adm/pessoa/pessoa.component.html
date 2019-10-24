@@ -1,20 +1,29 @@
 <h1>Pessoa</h1>
 
-<form #form="ngForm" (ngSubmit)="onSubmit(form)">
+<form [formGroup]="form" (ngSubmit)="onSubmit(form)">
     <div>
         Nome:
-        <input [value]="pessoa.nome" (input)="pessoa.nome = $event.target.value" #nome> - {{ pessoa.nome }}
+        <input [(ngModel)]="pessoa.nome" #nome name="nome" formControlName="nome" id="nome"> - {{ pessoa.nome }}
+    </div>
+    <div>
+        Sobrenome:
+        <input [(ngModel)]="pessoa.sobrenome" #sobrenome name="sobrenome" formControlName="sobrenome"> - {{pessoa.sobrenome}}
     </div>
     <div>
         Idade:
-        <input [(ngModel)]="pessoa.sobrenome" #sobrenome name="sobrenome"> - {{pessoa.sobrenome}}
+        <input type="number" [(ngModel)]="pessoa.idade" #idade name="idade" formControlName="idade"> - {{pessoa.idade}}
     </div>
+    <br>
     <div>
-        Idade:
-        <input type="number" [(ngModel)]="pessoa.idade" #idade name="idade"> - {{pessoa.idade}}
+        <button type="submit" [disabled]="form && !form.valid">Salvar Dados</button>
     </div>
-    <div>
-        <button type="submit">Salvar Dados</button>
-    </div>
+
+    <br><br>
+
+    <mat-form-field class="example-full-width">
+        <input matInput placeholder="Favorite food" value="Sushi">
+    </mat-form-field>
 </form>
 
+{{ form.value | json }}
+{{ form.valid }}
